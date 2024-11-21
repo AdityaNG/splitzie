@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    network_mode: "host"
+    volumes:
+      - .:/app
+      - ./server/storage:/app/storage
+    environment:
+      - MONGO_SERVER_URL=localhost:27017
+      - MONGO_USERNAME=root
+      - MONGO_PASSWORD=example
+      - MONGO_DB_NAME=serverdb
+      - DATA_STORAGE_PATH=/app/storage
+    depends_on:
+      - mongodb
+    command: python3 -m server
+
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+
+volumes:
+  mongodb_data:
