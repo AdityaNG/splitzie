@@ -6,7 +6,7 @@ A web app to use AI to split your bills!
     "Split the Prothas and paneer curry between Amogh, Rajesh and Gokul. Rajesh didn't have any of the starters. Rajesh and Gokul rach had a coke."
 3. The AI computes the mapping between the people to their items, and then returns a split up of the entire bill!
 
-<video src="media/demo.mp4" width=200px autoplay loop></video>
+<img src="media/demo.gif" width="300" alt="Demo">
 
 # Getting started
 
