@@ -1,6 +1,12 @@
 # Splitzie
 
-A template with a python web server and a react web app
+A web app to use AI to split your bills!
+1. Upload your bill
+2. Give a short text description of who ate what
+    "Split the Prothas and paneer curry between Amogh, Rajesh and Gokul. Rajesh didn't have any of the starters. Rajesh and Gokul rach had a coke."
+3. The AI computes the mapping between the people to their items, and then returns a split up of the entire bill!
+
+<video src="media/demo.mp4" width=200px autoplay loop></video>
 
 # Getting started
 
